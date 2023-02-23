@@ -1,0 +1,12 @@
+**/node_modules/
+**/.DS_Store/*
+**/*package-lock.json
+**/*.tmp
+**/*.bak
+**/*.swp
+**/*~.nib
+**/*.lock
+**/*.log
+**/*.vscode
+**/*.eslintcache
+server/prisma/migrations/**
