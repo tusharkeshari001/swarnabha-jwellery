@@ -1,9 +1,9 @@
 import express from 'express';
-import { loginUser, signupUser } from '../controller/authRoute';
+import { login, home } from '../controller/authRoute';
 
 const router = express.Router();
 
-router.get('/login',loginUser);
-router.get('/signup',signupUser);
+router.get('/login',login);
+router.get('/swarnabha-jwellery',home);
 
 export default router;

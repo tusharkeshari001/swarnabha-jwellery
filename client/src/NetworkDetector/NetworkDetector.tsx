@@ -18,7 +18,7 @@ const NetworkDetector = () => {
             setIsConnected(true);
             clearInterval(checkServer);
           });
-      }, 2000);
+      }, 1000);
     }
   };
 
@@ -42,7 +42,7 @@ const NetworkDetector = () => {
             color: "#fff",
             padding: '10px',
             textAlign: "center",
-        
+
           }}
         >
           Bad Connection
