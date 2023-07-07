@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { appUrl } from "../services/URLService";
+import { ENV_URL } from "../services/AppUrl";
 
 const NetworkDetector = () => {
   const [isConnected, setIsConnected] = useState(false);
@@ -7,7 +7,7 @@ const NetworkDetector = () => {
     const connection = navigator.onLine ? "online" : "offline";
     if (connection === "online") {
       const checkServer = setInterval(() => {
-        fetch(appUrl, {
+        fetch(ENV_URL, {
           mode: "no-cors",
         })
           .then(() => {

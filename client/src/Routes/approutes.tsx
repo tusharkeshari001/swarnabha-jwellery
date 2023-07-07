@@ -1,4 +1,4 @@
-import React, { lazy } from 'react'
+import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { LoginPageModel } from '../Application/builder/login/model/LoginPageModel'
 import { buildLoginPage } from "../Application/builder/login/controller/LoginPageController";
