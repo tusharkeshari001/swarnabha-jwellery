@@ -1,1 +1,5 @@
-export const appUrl = process.env.PUBLIC_URL || "http://localhost:3005/login"
+import { ENV_URL } from "./AppUrl";
+
+
+// api url
+export const applicationUrl = ENV_URL;

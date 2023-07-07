@@ -1,39 +1,27 @@
 import React from "react";
+// import { redirect } from "react-router-dom";
 import "./App.css";
+import BellcurveChart from "./charts/BellcurveChart/ui/BellcurveChart";
 import NetworkDetector from "./NetworkDetector/NetworkDetector";
-import { appUrl } from "./services/URLService";
+import approutes from "./Routes/approutes";
 
 function App() {
-  return (
-    <>
-      <NetworkDetector />
-    </>
+  const [isUserLoggedIn, setIsUserLoggedIn] = React.useState<Boolean | null>(
+    null
   );
+
+  if (isUserLoggedIn !== null) {
+    return isUserLoggedIn ? approutes() : <></>;
+  } else {
+    return (
+      <>
+        <NetworkDetector />
+        {/* <p style={{textAlign:'center'}}>Welcome Page</p> */}
+        {/* <BellcurveChart /> */}
+        {approutes()}
+      </>
+    );
+  }
 }
 
 export default App;
-
-// function App() {
-//   const [message, setMessage] = React.useState('');
-
-//   React.useEffect(() => {
-//     fetch(appUrl).then((response:any)=>{
-//       return response.json();
-//     }).then((data:any)=>{
-//       // console.log(data);
-//       setMessage(data.message);
-//     }).catch((error:any)=>{
-//       console.log('getting error while fetching data',error);
-//     })
-//     return () => {
-//     }
-//   }, [])
-
-//   return (
-//     <div className="App">
-//       {navigator.onLine?'online':'offline'}
-//       <br></br>
-//       {message}
-//     </div>
-//   );
-// }
