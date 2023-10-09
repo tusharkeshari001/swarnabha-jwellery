@@ -1,0 +1,64 @@
+.entity-ui {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.entity-name {
+    display: flex;
+    margin: 10px;
+}
+
+.entity-name > #user-name {
+    padding: 9px;
+    font-weight: bold;
+}
+
+.radio-type {
+    display: flex;
+    margin: 10px;
+}
+
+.radio-type > #entity-type {
+    padding: 9px;
+    font-weight: bold;
+}
+
+.table-header-cell {
+    border: 1px solid rgba(224, 224, 224, 1);
+    font-weight: bold !important; 
+}
+
+.table-body-cell {
+    border: 1px solid rgba(224, 224, 224, 1);
+    /* background-color: aliceblue; */
+    background-color: #E7E9EB;
+}
+
+.table-body-cell .cell-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.composite-key { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.composite-key > .first {
+    width: 49%;
+}
+
+.composite-key > .second {
+    width: 49%;
+}
+
+.label-message {
+    padding: 6px 8px;
+}
+
+.label-and-create-button > #composite-key-label {
+    font-weight: bold;
+}

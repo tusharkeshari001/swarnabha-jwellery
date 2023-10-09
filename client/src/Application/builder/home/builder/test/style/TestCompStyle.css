@@ -1,0 +1,39 @@
+.card-side.back {
+    display: none;
+    transform: rotateY('180deg');
+}
+
+.card:hover .card-side.back {
+    display: block;
+    transform: rotateY('0deg');
+}
+
+.card-side.front {
+    display: block;
+    transform: rotateY('0deg');
+}
+
+.card:hover .card-side.front {
+    display: none;
+    transform: rotateY('180deg');
+}
+
+.card {
+    perspective: 150rem;
+    position: relative;
+    height: 40rem;
+    max-width: 400px;
+    margin: 2rem;
+    box-shadow: none;
+    background: rgb(115, 115, 134);
+    overflow: hidden    ;
+}
+
+.card-side {
+    background: rgb(97, 67, 67);
+    /* display: none; */
+}
+
+/* .card-side {
+    background: green;
+} */

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ENV_URL } from "../services/AppUrl";
+// import { Redirect } from "react-router-dom";
 
 const NetworkDetector = () => {
   const [isConnected, setIsConnected] = useState(false);
@@ -7,7 +8,7 @@ const NetworkDetector = () => {
     const connection = navigator.onLine ? "online" : "offline";
     if (connection === "online") {
       const checkServer = setInterval(() => {
-        fetch(ENV_URL, {
+        fetch(`${ENV_URL}`, {
           mode: "no-cors",
         })
           .then(() => {
@@ -16,6 +17,21 @@ const NetworkDetector = () => {
           })
           .catch(() => {
             setIsConnected(true);
+            clearInterval(checkServer);
+          });
+      }, 1000);
+    }else {
+      const checkServer = setInterval(() => {
+        fetch(`${ENV_URL}`, {
+          mode: "no-cors",
+        })
+          .then(() => {
+            // <Redirect to='/fallback'/>
+            // setIsConnected(false);
+            clearInterval(checkServer);
+          })
+          .catch(() => {
+            // setIsConnected(true);
             clearInterval(checkServer);
           });
       }, 1000);

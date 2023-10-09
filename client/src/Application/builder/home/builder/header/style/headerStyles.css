@@ -1,0 +1,17 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+.header-tabs {
+    width: fit-content;
+    float: right;    
+}
+
+.home , .kagamiStudio, .about{
+    float: left;
+    border: 1px solid black;
+    margin: 5px 10px;
+    cursor: pointer;
+    padding: 5px;
+}

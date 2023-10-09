@@ -1,0 +1,23 @@
+.dialog-box {
+  position: "absolute" as "absolute";
+  top: "50%";
+  left: "50%";
+  transform: "translate(-50%, -50%)";
+}
+
+.dialog-title {
+    box-shadow: 1px 1px 1px 1px #888; 
+    font-size: 1.1rem !important;
+    line-height: 1 !important;
+    display: flex;
+    justify-content: center;
+}
+
+.dialog-content {
+    box-shadow: 1px 1px 1px 1px #888; 
+    padding: 12px !important;
+}
+
+.dialog-action {
+    /* box-shadow: 1px 1px 1px 1px #888;  */
+}

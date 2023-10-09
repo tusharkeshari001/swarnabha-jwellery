@@ -1,0 +1,36 @@
+.create-entity-attribute-form {
+    /* width: 1500px; */
+}
+
+.entity-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.attribute-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.display-attribute-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.attribute-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-type {
+    margin-top: 17px;
+}
+
+.number-type {
+    margin-top: 17px;
+}
+
+.default-value {
+    /* display: flex;
+    flex-direction: column; */
+}
